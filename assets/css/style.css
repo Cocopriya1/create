@@ -494,4 +494,24 @@ body {
   .footer-content {
     grid-template-columns: minmax(0, 1fr);
   }
+  @media (max-width: 768px) {
+
+    nav {
+        display: block;
+        z-index: 999;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    nav a {
+        color: #FFA500; /* visible colour */
+        font-size: 18px;
+    }
+}
+
 }
