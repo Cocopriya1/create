@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Privacy Policy | ProcessPro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site-header solid">
+  <div class="container nav-container">
+    <div class="logo">
+      <span class="logo-mark">PP</span>
+      <span class="logo-text">ProcessPro</span>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero section fade-in">
+    <div class="container">
+      <h1>Privacy Policy</h1>
+      <p>How ProcessPro handles information provided by brokers in the course of loan processing support.</p>
+    </div>
+  </section>
+
+  <section class="section fade-in">
+    <div class="container privacy-content">
+      <h2>1. Overview</h2>
+      <p>ProcessPro provides loan processing support services to mortgage and finance brokers. In doing so, we may handle information that brokers share with us for the purpose of supporting their loan processing workflow.</p>
+
+      <h2>2. Information We May Handle</h2>
+      <p>Information handled may include details about broker clients, loan applications and supporting documentation. This information is used solely for the purpose of assisting with loan processing activities requested by the broker.</p>
+
+      <h2>3. How Information Is Used</h2>
+      <p>Information is used to organise, prepare and support loan files as part of the services provided to brokers. We do not use this information for marketing or unrelated purposes.</p>
+
+      <h2>4. Confidentiality</h2>
+      <p>Client and broker information is treated with professional care and confidentiality. Information is not shared with third parties except where required to support the agreed processing workflow or where required by law.</p>
+
+      <h2>5. Data Storage</h2>
+      <p>Information may be stored within tools and systems agreed with each brokerage as part of their workflow. Specific storage and access arrangements can be discussed and agreed with each broker.</p>
+
+      <h2>6. Third‑Party Tools</h2>
+      <p>Where third‑party tools are used as part of a broker’s workflow, those tools will have their own privacy and security practices. Brokers should review the terms of any tools they choose to use in their processes.</p>
+
+      <h2>7. Contact</h2>
+      <p>If you have questions about this Privacy Policy or how information is handled in connection with ProcessPro’s services, please contact us at <a href="mailto:info@processpro.com">info@processpro.com</a>.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-content">
+    <div class="footer-left">
+      <div class="logo footer-logo">
+        <span class="logo-mark">PP</span>
+        <span class="logo-text">ProcessPro</span>
+      </div>
+      <p>End‑to‑end loan processing support for mortgage and finance brokers.</p>
+    </div>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-meta">
+      <p>&copy; <span id="year"></span> ProcessPro. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const faders = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  faders.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

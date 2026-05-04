@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ProcessPro | Loan Processing for Brokers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site-header transparent">
+  <div class="container nav-container">
+    <div class="logo">
+      <span class="logo-mark">PP</span>
+      <span class="logo-text">ProcessPro</span>
+    </div>
+    <nav class="nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero section fade-in">
+    <div class="container hero-content">
+      <h1>End‑to‑End Loan Processing for Brokers</h1>
+      <p>Streamlined, accurate and compliant loan processing so you can focus on clients while the files are handled professionally.</p>
+      <div class="hero-actions">
+        <a href="services.html" class="btn primary">View Services</a>
+        <a href="contact.html" class="btn ghost">Partner With ProcessPro</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section fade-in">
+    <div class="container two-col">
+      <div>
+        <h2>Built for Mortgage & Finance Brokers</h2>
+        <p>ProcessPro works exclusively with brokers, acting as your dedicated back‑office loan processing partner. You bring in the clients; we handle the workflow.</p>
+      </div>
+      <div class="card-grid">
+        <div class="card">
+          <h3>End‑to‑End Processing</h3>
+          <p>From application intake to settlement support, we manage the full lifecycle of each file.</p>
+        </div>
+        <div class="card">
+          <h3>Compliance‑Aware</h3>
+          <p>Files are prepared with KYC/AML awareness and documentation completeness in mind.</p>
+        </div>
+        <div class="card">
+          <h3>Scale Without Hiring</h3>
+          <p>Grow your brokerage without adding internal headcount or training new staff.</p>
+        </div>
+        <div class="card">
+          <h3>Confidential & Secure</h3>
+          <p>Client information is handled with strict confidentiality and professional care.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section fade-in">
+    <div class="container">
+      <h2>How ProcessPro Supports Your Brokerage</h2>
+      <div class="steps">
+        <div class="step">
+          <span class="step-number">1</span>
+          <h3>Application Intake Support</h3>
+          <p>Organised collection and structuring of client information so every file starts clean.</p>
+        </div>
+        <div class="step">
+          <span class="step-number">2</span>
+          <h3>Document Verification</h3>
+          <p>Checking documents for completeness and consistency before they reach the lender.</p>
+        </div>
+        <div class="step">
+          <span class="step-number">3</span>
+          <h3>Packaging & Submission</h3>
+          <p>Preparing lender‑ready applications that align with requirements and expectations.</p>
+        </div>
+        <div class="step">
+          <span class="step-number">4</span>
+          <h3>Follow‑Up & Settlement</h3>
+          <p>Tracking progress, chasing updates and supporting you through to settlement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-content">
+    <div class="footer-left">
+      <div class="logo footer-logo">
+        <span class="logo-mark">PP</span>
+        <span class="logo-text">ProcessPro</span>
+      </div>
+      <p>End‑to‑end loan processing support for mortgage and finance brokers.</p>
+    </div>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-meta">
+      <p>&copy; <span id="year"></span> ProcessPro. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Solid nav on scroll
+  const header = document.querySelector('.site-header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 40) {
+      header.classList.add('solid');
+    } else {
+      header.classList.remove('solid');
+    }
+  });
+
+  // Set year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Fade-in on scroll
+  const faders = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  faders.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

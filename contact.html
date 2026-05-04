@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact | ProcessPro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site-header solid">
+  <div class="container nav-container">
+    <div class="logo">
+      <span class="logo-mark">PP</span>
+      <span class="logo-text">ProcessPro</span>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero section fade-in">
+    <div class="container">
+      <h1>Contact ProcessPro</h1>
+      <p>Ready to discuss your loan processing workflow or file volumes? Get in touch.</p>
+    </div>
+  </section>
+
+  <section class="section fade-in">
+    <div class="container two-col contact-layout">
+      <div>
+        <h2>Contact Details</h2>
+        <p>Use the details below to reach out and start a conversation about how ProcessPro can support your brokerage.</p>
+        <ul class="contact-list">
+          <li><strong>Email:</strong> <a href="mailto:info@processpro.com">info@processpro.com.au</a></li>
+          <li><strong>Phone:</strong> <span>+61 0403 852 856</span></li>
+          <li><strong>Location:</strong> Sydney, NSW, Australia</li>
+          <li><strong>Hours:</strong> Monday – Friday, 9:00am – 5:00pm (AEST)</li>
+        </ul>
+      </div>
+      <div class="highlight-box">
+        <h3>What to Include</h3>
+        <p>When you reach out, it can help to include:</p>
+        <ul class="list">
+          <li>Approximate monthly file volume.</li>
+          <li>Types of loans you primarily work with.</li>
+          <li>Which stages of the process you’d like support with.</li>
+        </ul>
+        <p>This makes it easier to suggest a structure that fits your brokerage.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-content">
+    <div class="footer-left">
+      <div class="logo footer-logo">
+        <span class="logo-mark">PP</span>
+        <span class="logo-text">ProcessPro</span>
+      </div>
+      <p>End‑to‑end loan processing support for mortgage and finance brokers.</p>
+    </div>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-meta">
+      <p>&copy; <span id="year"></span> ProcessPro. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const faders = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  faders.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

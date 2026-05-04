@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FAQ | ProcessPro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site-header solid">
+  <div class="container nav-container">
+    <div class="logo">
+      <span class="logo-mark">PP</span>
+      <span class="logo-text">ProcessPro</span>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="faq.html" class="active">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero section fade-in">
+    <div class="container">
+      <h1>Frequently Asked Questions</h1>
+      <p>Answers to common questions from brokers working with ProcessPro.</p>
+    </div>
+  </section>
+
+  <section class="section fade-in">
+    <div class="container faq-list">
+      <div class="faq-item">
+        <h3>Who do you work with?</h3>
+        <p>ProcessPro works exclusively with mortgage and finance brokers. We operate as a back‑office processing partner rather than a client‑facing service.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do you work with all loan types?</h3>
+        <p>We focus on broker‑driven loan files. Specific loan types and scenarios can be discussed based on your workflow and lender panel.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do we share files and documents?</h3>
+        <p>File‑sharing and document workflows are agreed with each brokerage. We work with secure, commonly used tools and processes that align with your existing setup.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Are you client‑facing?</h3>
+        <p>ProcessPro is primarily a back‑office service. You remain the main point of contact for your clients while we support you behind the scenes.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How is confidentiality handled?</h3>
+        <p>Client information is treated with professional care and confidentiality. We only use information for the purpose of supporting your loan processing workflow.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do we get started?</h3>
+        <p>Reach out via the Contact page to discuss your current workflow, file volumes and how you’d like to use ProcessPro. From there, we can agree on a structure that fits your brokerage.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-content">
+    <div class="footer-left">
+      <div class="logo footer-logo">
+        <span class="logo-mark">PP</span>
+        <span class="logo-text">ProcessPro</span>
+      </div>
+      <p>End‑to‑end loan processing support for mortgage and finance brokers.</p>
+    </div>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-meta">
+      <p>&copy; <span id="year"></span> ProcessPro. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const faders = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  faders.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

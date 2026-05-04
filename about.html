@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About | ProcessPro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site-header solid">
+  <div class="container nav-container">
+    <div class="logo">
+      <span class="logo-mark">PP</span>
+      <span class="logo-text">ProcessPro</span>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="services.html">Services</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero section fade-in">
+    <div class="container">
+      <h1>About ProcessPro</h1>
+      <p>A dedicated loan processing partner for brokers who want to scale without sacrificing quality.</p>
+    </div>
+  </section>
+
+  <section class="section fade-in">
+    <div class="container two-col">
+      <div>
+        <h2>Who We Work With</h2>
+        <p>ProcessPro is built specifically for mortgage and finance brokers. We operate as your back‑office processing partner, handling the detail‑heavy work so you can stay focused on client relationships and business growth.</p>
+        <p>Whether you’re a solo broker or part of a growing brokerage, ProcessPro provides consistent, reliable support across your loan pipeline.</p>
+      </div>
+      <div>
+        <h2>Our Mission</h2>
+        <p>Our mission is simple: to make loan processing smoother, clearer and more efficient for brokers. We believe that when your files are organised and well‑managed, you can deliver a better experience to your clients and grow with confidence.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section fade-in">
+    <div class="container">
+      <h2>What We Value</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Accuracy</h3>
+          <p>Every file is handled with attention to detail, reducing rework and delays.</p>
+        </div>
+        <div class="card">
+          <h3>Confidentiality</h3>
+          <p>Client information is treated with professional care and discretion.</p>
+        </div>
+        <div class="card">
+          <h3>Reliability</h3>
+          <p>Consistent support so you can rely on your processing workflow.</p>
+        </div>
+        <div class="card">
+          <h3>Broker‑First Approach</h3>
+          <p>Everything we do is designed around the needs and realities of brokers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-content">
+    <div class="footer-left">
+      <div class="logo footer-logo">
+        <span class="logo-mark">PP</span>
+        <span class="logo-text">ProcessPro</span>
+      </div>
+      <p>End‑to‑end loan processing support for mortgage and finance brokers.</p>
+    </div>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-meta">
+      <p>&copy; <span id="year"></span> ProcessPro. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const faders = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  faders.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
